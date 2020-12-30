@@ -39,12 +39,6 @@ class Calculator extends React.Component {
       .replace('x', '*')
       .replace(threeOpsRegex, '$3')
       .replace(twoOpsRegex, '$2')
-
-    console.log(expression.match(opsRegex))
-    console.log(expression.match(threeOpsRegex))
-    console.log(expression.match(twoOpsRegex))
-
-    console.log(expression)
     this.setState(() => {
       return {
         input: eval(expression),
@@ -93,7 +87,6 @@ class Calculator extends React.Component {
 
   handleClick (e) {
     let clickValue = e.target.value
-    console.log(clickValue)
     if (clickValue === 'AC') {
       console.log('reset')
       this.reset()
@@ -108,10 +101,7 @@ class Calculator extends React.Component {
     return
   }
   handleKeyPress (e) {
-    let keyPress = e.key.toUpperCase()
-    let keys = ['Q', 'W', 'E', 'A', 'S', 'D', 'Z', 'X', 'C']
-    if (keys.includes(keyPress)) {
-      this.playMusic(keyPress)
+    // To be completed in future (not a requirement) 
     }
   }
 
