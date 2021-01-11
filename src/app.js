@@ -9,18 +9,11 @@ class Calculator extends React.Component {
       input: "0",
       lastOperator: "",
     };
-    this.handleKeyPress = this.handleKeyPress.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.handleNumber = this.handleNumber.bind(this);
     this.handleOperator = this.handleOperator.bind(this);
     this.evaluate = this.evaluate.bind(this);
     this.reset = this.reset.bind(this);
-  }
-  componentDidMount() {
-    document.addEventListener("keydown", this.handleKeyPress);
-  }
-  componentWillUnmount() {
-    document.removeEventListener("keydown", this.handleKeyPress);
   }
 
   reset() {
